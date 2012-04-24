@@ -16,3 +16,4 @@
 //= require backbone
 //= require_tree ./models
 //= require_tree .
+//= require_directory ../templates
