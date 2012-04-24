@@ -8,6 +8,11 @@ var TweetsView = Backbone.View.extend({
   },
 
   render: function() {
+    var rows = "";
+    this.collection.each(function(tweet) {
+      rows = rows + "<tr><td>" + tweet.get('text') + "</td></tr>";
+    });
+    this.$el.html(rows);
     return this;
   }
 });
