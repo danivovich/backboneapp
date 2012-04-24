@@ -1,6 +1,12 @@
-<div class="wrapper">
+<div id="wrapper">
   My page
 </div>
 
 <script>
+  var tweets = new Tweets();
+  var tweets_view = new TweetsView({
+    collection: tweets
+  });
+  $('#wrapper').prepend(tweets_view.$el);
+  tweets.fetch();
 </script>
